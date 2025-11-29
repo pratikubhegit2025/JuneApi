@@ -14,7 +14,7 @@ public class HttpsResponses {
     @Test
     void user() {
 
-         //useRelaxedHTTPSValidation();  // FIX
+      //   useRelaxedHTTPSValidation();  // FIX
 
         given()
         .when()
@@ -28,7 +28,8 @@ public class HttpsResponses {
    @Test
    void createUser() {
 	   
-	  
+	   RestAssured.proxy("", 0);
+	   RestAssured.useRelaxedHTTPSValidation();
 
 	   HashMap data= new HashMap();
 	   data.put("name", "Pratik");
